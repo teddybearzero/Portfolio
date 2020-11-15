@@ -1,16 +1,11 @@
 import React, { Component} from 'react'; 
+import Projects from './Projects'; 
 
 class App extends Component {
 
-    constructor(){
-        super();
-        this.state = {displayBio: false };
+    state = {displayBio:false}; 
 
-        this.toggleDisplayBio = this.toggleDisplayBio.bind(this); 
-    }
-
-    //doesn't work
-    toggleDisplayBio() {
+    toggleDisplayBio = () => {
         this.setState({displayBio: !this.state.displayBio}); 
     }
     
@@ -24,14 +19,16 @@ class App extends Component {
                     <p>I am a highly adaptable individual</p>
                     <p>with both academic and practical IT industry skills, capable of working both independently or within a team. </p>
                     <p> I am looking for a suitable position, which will prove to be both a personal and professional challenge.</p>
-                    <button onClick = {this.displayBio}>Show Less</button>
+                    <button onClick = {this.toggleDisplayBio}>Show Less</button>
                  </div>
                 ) : (
                     <div>
-                        <button onClick = {this.displayBio}>Read more</button>
+                        <button onClick = {this.toggleDisplayBio}>Read more</button>
                     </div>
                     )
                 }
+                <hr/>
+                <Projects/>
             </div>
         )
     }
