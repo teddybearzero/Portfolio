@@ -8,12 +8,12 @@ import project6 from '../assets/project6.png';
 const PROJECTS = [
     {
         title: 'Hardware Rivals (2016)',
-        description: 'Carried out end-to-end testing, liaising with the lead producer and other members of the team to ensure test coverage. Creating, maintaining and updating Lua API unit tests ensuring all new Lua functions work as designed, while also reviewing documentation. Created Lua test samples used by both internal and external test teams to test functionality of new API features effectively. Used SQL to find assets with the Playstation Home database. ',
+        description: 'Carried out end-to-end testing',
         image: project1
     },
     {
         title: 'Playstation home',
-        description: 'Managed the testing process overseeing an external test team while also creating test plans and test reports for the successful launch of our game Hardware Rivals. Worked in an agile environment, assisting with test strategy as part of sprint planning.Started work on a selenium automation framework with C# for a crucial web service used by hundreds of developers worldwide.  Carried out research into using Cucumber/Speal Game Engine with C++.',
+        description: 'Managed the testing process overseeing',
         image: project2
     },
     {
