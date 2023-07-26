@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import PROJECTS from './data/projects';
+import PROJECTS from '../data/projects';
 
 class Project extends Component {
     render() {
@@ -8,7 +8,7 @@ class Project extends Component {
 
         return (
             <div style={{display: 'inline-block', width: 400, margin: 20}}>
-                <h3>{title}</h3>
+                <h4>{title}</h4>
                 <img src ={image} alt='profile' style={{width: 400, height: 320}}/>
                 <p>{description}</p>
             </div>

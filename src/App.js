@@ -1,17 +1,34 @@
-import React, {Component} from 'react';
-import Projects from './Projects';
-import Menu from './Menu';
-import SocialProfiles from './SocialProfiles';
-import AboutMe from './AboutMe';
+import React, { Component } from 'react';
+import SocialProfiles from '../src/components/SocialProfiles';
+import Projects from '../src/components/Projects';
+import {
+    NavLink,
+    HashRouter,
+    Route,
+    Routes
+} from "react-router-dom";
 
 class App extends Component {
 
     render() {
         return (
-            <div className='container'>
-                <div><Menu/></div>
-                <div><AboutMe/></div>
-            </div>
+            <HashRouter>
+                <div className='sidebar'>
+                    <ul>
+                        <li><NavLink to="./">Home</NavLink></li>
+                        <li><NavLink to="/projects">Work Portfolio</NavLink></li>
+                        <li><NavLink to="/personal">Personal Portfolio</NavLink></li>
+                        <li><NavLink to="/aboutme">About Me</NavLink></li>
+                        <li><SocialProfiles /></li>
+                    </ul>
+                    <div>
+                        <Routes>
+                            <Route exact path="/" component={App} />
+                            <Route exact path="/projects" component={Projects} />
+                        </Routes>
+                    </div>
+                </div>
+            </HashRouter>
         )
     }
 }
